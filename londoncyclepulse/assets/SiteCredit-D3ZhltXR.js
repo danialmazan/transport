@@ -1,0 +1,1 @@
+import{t as e}from"./index-CR2wGYyA.js";var t=e();function n({className:e=``,madeBy:n=!1}){return(0,t.jsxs)(`footer`,{className:`site-credit ${e}`.trim(),children:[n&&`Made by Daniel Almazán (`,(0,t.jsx)(`a`,{href:`https://danielalmazan.com/`,children:`danielalmazan.com`}),n&&`)`]})}export{n as t};
