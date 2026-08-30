@@ -10,7 +10,6 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<meta name="author" content="Daniel Almazan" />
 
 
 <title>Transport</title>
@@ -56,8 +55,6 @@ ul.task-list{list-style: none;}
 
 
 
-<h1 class="title toc-ignore">Transport</h1>
-<h4 class="author">Daniel Almazan</h4>
 
 
 
@@ -133,6 +130,19 @@ text-underline-offset: 0.18em;
 color: var(--dani-highlight);
 text-decoration-color: currentColor;
 }
+.page-topbar { align-items: center; display: flex; gap: 18px; justify-content: space-between; }
+.page-topbar .back-link { margin-bottom: 0; }
+.language-switch {
+align-items: center; background: rgba(255, 255, 255, 0.64); border: 1px solid var(--dani-border);
+border-radius: 999px; display: inline-flex; flex: 0 0 auto; gap: 2px; padding: 3px;
+}
+.language-switch span { color: var(--dani-muted); font-size: 0.72rem; }
+.language-switch button {
+background: transparent; border: 0; border-radius: 999px; color: var(--dani-muted); cursor: pointer;
+font-family: var(--dani-mono-font); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; padding: 6px 8px;
+}
+.language-switch button[aria-pressed="true"] { background: var(--dani-text); color: var(--dani-bg); }
+.language-switch button:focus-visible { outline: 3px solid color-mix(in srgb, var(--dani-highlight), transparent 35%); outline-offset: 2px; }
 .hero {
 animation: rise-in 680ms ease both;
 max-width: 760px;
@@ -156,25 +166,12 @@ line-height: 0.96;
 margin: 12px 0 20px;
 max-width: 640px;
 }
-.page-subtitle,
-.projects-title {
-color: var(--dani-text);
-font-family: var(--dani-heading-font-serif);
-font-size: clamp(1.12rem, 2vw, 1.6rem);
-letter-spacing: -0.025em;
-line-height: 1;
-margin: 0 0 12px;
-}
 .lead {
 color: var(--dani-text-soft);
 font-size: clamp(1rem, 1.5vw, 1.18rem);
 line-height: 1.5;
+margin: 0;
 max-width: 680px;
-}
-.projects-title {
-animation: rise-in 680ms ease both;
-animation-delay: 80ms;
-margin-top: 6px;
 }
 .project-list {
 animation: rise-in 680ms ease both;
@@ -268,33 +265,78 @@ font-size: 0.84rem;
 }
 }
 </style>
-<main class="dani-page">
-  <a class="back-link" href="https://danielalmazan.com/">back to home</a>
+<main class="dani-page" data-page-title-en="Transport — Daniel Almazan" data-page-title-es="Transporte — Daniel Almazan" data-page-description-en="Maps with transport data" data-page-description-es="Mapas con datos de transporte">
+  <div class="page-topbar">
+    <a class="back-link" href="https://danielalmazan.com/" data-i18n-href-en="https://danielalmazan.com/" data-i18n-href-es="https://danielalmazan.com/?lang=es" data-i18n-en="back to home" data-i18n-es="volver al inicio">back to home</a>
+    <div class="language-switch" role="group" aria-label="Language" data-i18n-aria-label-en="Language" data-i18n-aria-label-es="Idioma">
+  <button type="button" data-lang="en" aria-pressed="true">EN</button>
+  <span aria-hidden="true">/</span>
+  <button type="button" data-lang="es" aria-pressed="false">ES</button>
+</div>
+  </div>
 
   <section class="hero" aria-labelledby="page-title">
     <div class="eyebrow">Daniel Almazan</div>
-    <h1 id="page-title">Transport</h1>
-    <h2 class="page-subtitle">About</h2>
-    <p class="lead">Maps with transport data</p>
+    <h1 id="page-title" data-i18n-en="Transport" data-i18n-es="Transporte">Transport</h1>
+    <p class="lead" data-i18n-en="Maps with transport data" data-i18n-es="Mapas con datos de transporte">Maps with transport data</p>
   </section>
 
-  <h2 class="projects-title">Projects</h2>
-
-  <section class="project-list" aria-label="Projects">
-<a class="project-card" href="https://danielalmazan.com/metromadrid/dashboard.html">
-  <h3>Metro de Madrid - Demand dashboard</h3>
-  <p>Interactive dashboard exploring network and station demand, daily patterns, recovery and the impact of service disruptions using official Metro de Madrid data.</p>
+  <section class="project-list" aria-label="Projects" data-i18n-aria-label-en="Projects" data-i18n-aria-label-es="Proyectos">
+<a class="project-card" href="https://danielalmazan.com/metromadrid/dashboard.html" data-i18n-href-en="https://danielalmazan.com/metromadrid/dashboard.html" data-i18n-href-es="https://danielalmazan.com/metromadrid/dashboard.html">
+  <h3 data-i18n-en="Metro de Madrid - Demand dashboard" data-i18n-es="Metro de Madrid — Panel de demanda">Metro de Madrid - Demand dashboard</h3>
+  <p data-i18n-en="Interactive dashboard exploring network and station demand, daily patterns, recovery and the impact of service disruptions using official Metro de Madrid data." data-i18n-es="Panel interactivo para explorar la demanda de la red y las estaciones, los patrones diarios, la recuperación y el impacto de las interrupciones del servicio con datos oficiales de Metro de Madrid.">Interactive dashboard exploring network and station demand, daily patterns, recovery and the impact of service disruptions using official Metro de Madrid data.</p>
 </a>
-<a class="project-card" href="https://danielalmazan.com/transport/londoncyclepulse">
-  <h3>London Cycle Pulse</h3>
-  <p>Interactive maps and charts exploring typical Santander Cycles docking and undocking patterns across London.</p>
+<a class="project-card" href="https://danielalmazan.com/transport/londoncyclepulse" data-i18n-href-en="https://danielalmazan.com/transport/londoncyclepulse" data-i18n-href-es="https://danielalmazan.com/transport/londoncyclepulse">
+  <h3 data-i18n-en="London Cycle Pulse" data-i18n-es="London Cycle Pulse">London Cycle Pulse</h3>
+  <p data-i18n-en="Interactive maps and charts exploring typical Santander Cycles docking and undocking patterns across London." data-i18n-es="Mapas y gráficos interactivos sobre los patrones habituales de anclaje y retirada de Santander Cycles en Londres.">Interactive maps and charts exploring typical Santander Cycles docking and undocking patterns across London.</p>
 </a>
-<a class="project-card" href="https://danielalmazan.com/transport/madrid_public_transport.html">
-  <h3>Madrid. Public transport network</h3>
-  <p>Interactive map of Madrid’s public transport network, covering Metro, Cercanías (commuter rail), Metro Ligero (light rail), EMT buses and BiciMAD stations.</p>
+<a class="project-card" href="https://danielalmazan.com/transport/madrid_public_transport.html" data-i18n-href-en="https://danielalmazan.com/transport/madrid_public_transport.html" data-i18n-href-es="https://danielalmazan.com/transport/madrid_public_transport.html">
+  <h3 data-i18n-en="Madrid. Public transport network" data-i18n-es="Red de transporte público de Madrid">Madrid. Public transport network</h3>
+  <p data-i18n-en="Interactive map of Madrid’s public transport network, covering Metro, Cercanías (commuter rail), Metro Ligero (light rail), EMT buses and BiciMAD stations." data-i18n-es="Mapa interactivo de la red de transporte público de Madrid, que incluye Metro, Cercanías, Metro Ligero, autobuses de la EMT y estaciones de BiciMAD.">Interactive map of Madrid’s public transport network, covering Metro, Cercanías (commuter rail), Metro Ligero (light rail), EMT buses and BiciMAD stations.</p>
 </a>
   </section>
 </main>
+<script>
+(function () {
+  "use strict";
+  function languageFromUrl() {
+    return new URLSearchParams(window.location.search).get("lang") === "es" ? "es" : "en";
+  }
+  function setLanguage(language, updateUrl) {
+    document.documentElement.lang = language;
+    document.querySelectorAll("[data-i18n-en][data-i18n-es]").forEach(function (element) {
+      element.textContent = element.getAttribute("data-i18n-" + language);
+    });
+    document.querySelectorAll("[data-i18n-href-en][data-i18n-href-es]").forEach(function (element) {
+      element.setAttribute("href", element.getAttribute("data-i18n-href-" + language));
+    });
+    document.querySelectorAll("[data-i18n-aria-label-en][data-i18n-aria-label-es]").forEach(function (element) {
+      element.setAttribute("aria-label", element.getAttribute("data-i18n-aria-label-" + language));
+    });
+    document.querySelectorAll("[data-lang]").forEach(function (button) {
+      button.setAttribute("aria-pressed", String(button.getAttribute("data-lang") === language));
+    });
+    var page = document.querySelector("[data-page-title-en][data-page-title-es]");
+    if (page) {
+      document.title = page.getAttribute("data-page-title-" + language);
+      var meta = document.querySelector("meta[name=description]");
+      var description = page.getAttribute("data-page-description-" + language);
+      if (meta && description) meta.setAttribute("content", description);
+    }
+    if (updateUrl) {
+      var url = new URL(window.location.href);
+      if (language === "es") url.searchParams.set("lang", "es");
+      else url.searchParams.delete("lang");
+      history.replaceState({}, "", url);
+    }
+  }
+  document.querySelectorAll("[data-lang]").forEach(function (button) {
+    button.addEventListener("click", function () { setLanguage(button.getAttribute("data-lang"), true); });
+  });
+  window.addEventListener("popstate", function () { setLanguage(languageFromUrl(), false); });
+  setLanguage(languageFromUrl(), false);
+}());
+</script>
 
 
 
